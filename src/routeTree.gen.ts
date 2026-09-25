@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CommunityGuidelinesRouteImport } from './routes/community-guidelines'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HelpAndSupportRouteImport } from './routes/help-and-support'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as InviteCodeRouteImport } from './routes/invite.$code'
+import { Route as PostPostIdRouteImport } from './routes/post.$postId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CommunityGuidelinesRoute = CommunityGuidelinesRouteImport.update({
+  id: '/community-guidelines',
+  path: '/community-guidelines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpAndSupportRoute = HelpAndSupportRouteImport.update({
+  id: '/help-and-support',
+  path: '/help-and-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InviteCodeRoute = InviteCodeRouteImport.update({
+  id: '/invite/$code',
+  path: '/invite/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PostPostIdRoute = PostPostIdRouteImport.update({
+  id: '/post/$postId',
+  path: '/post/$postId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/contact': typeof ContactRoute
+  '/help-and-support': typeof HelpAndSupportRoute
+  '/terms': typeof TermsRoute
+  '/invite/$code': typeof InviteCodeRoute
+  '/post/$postId': typeof PostPostIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/contact': typeof ContactRoute
+  '/help-and-support': typeof HelpAndSupportRoute
+  '/terms': typeof TermsRoute
+  '/invite/$code': typeof InviteCodeRoute
+  '/post/$postId': typeof PostPostIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/contact': typeof ContactRoute
+  '/help-and-support': typeof HelpAndSupportRoute
+  '/terms': typeof TermsRoute
+  '/invite/$code': typeof InviteCodeRoute
+  '/post/$postId': typeof PostPostIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/community-guidelines'
+    | '/contact'
+    | '/help-and-support'
+    | '/terms'
+    | '/invite/$code'
+    | '/post/$postId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/community-guidelines'
+    | '/contact'
+    | '/help-and-support'
+    | '/terms'
+    | '/invite/$code'
+    | '/post/$postId'
+  id:
+    | '__root__'
+    | '/'
+    | '/community-guidelines'
+    | '/contact'
+    | '/help-and-support'
+    | '/terms'
+    | '/invite/$code'
+    | '/post/$postId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CommunityGuidelinesRoute: typeof CommunityGuidelinesRoute
+  ContactRoute: typeof ContactRoute
+  HelpAndSupportRoute: typeof HelpAndSupportRoute
+  TermsRoute: typeof TermsRoute
+  InviteCodeRoute: typeof InviteCodeRoute
+  PostPostIdRoute: typeof PostPostIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/community-guidelines': {
+      id: '/community-guidelines'
+      path: '/community-guidelines'
+      fullPath: '/community-guidelines'
+      preLoaderRoute: typeof CommunityGuidelinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help-and-support': {
+      id: '/help-and-support'
+      path: '/help-and-support'
+      fullPath: '/help-and-support'
+      preLoaderRoute: typeof HelpAndSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/invite/$code': {
+      id: '/invite/$code'
+      path: '/invite/$code'
+      fullPath: '/invite/$code'
+      preLoaderRoute: typeof InviteCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/post/$postId': {
+      id: '/post/$postId'
+      path: '/post/$postId'
+      fullPath: '/post/$postId'
+      preLoaderRoute: typeof PostPostIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CommunityGuidelinesRoute: CommunityGuidelinesRoute,
+  ContactRoute: ContactRoute,
+  HelpAndSupportRoute: HelpAndSupportRoute,
+  TermsRoute: TermsRoute,
+  InviteCodeRoute: InviteCodeRoute,
+  PostPostIdRoute: PostPostIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

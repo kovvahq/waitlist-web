@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://waitlist.kovva.app/sitemap.xml
+Sitemap: https://kovva.app/sitemap.xml

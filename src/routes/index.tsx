@@ -20,16 +20,16 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "https://waitlist.kovva.app" },
+      { property: "og:url", content: "https://kovva.app" },
       {
         property: "og:image",
-        content: "https://waitlist.kovva.app/og-image.jpg",
+        content: "https://kovva.app/og-image.jpg",
       },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       {
         name: "twitter:image",
-        content: "https://waitlist.kovva.app/og-image.jpg",
+        content: "https://kovva.app/og-image.jpg",
       },
     ],
     scripts: [
@@ -39,8 +39,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Kovva",
-          url: "https://waitlist.kovva.app",
-          logo: "https://waitlist.kovva.app/favicon.ico",
+          url: "https://kovva.app",
+          logo: "https://kovva.app/favicon.ico",
           description,
         }),
       },
@@ -285,14 +285,17 @@ function Index() {
             <a href="#waitlist" className="transition-colors hover:text-accent">
               Waitlist
             </a>
-            <a href="#" className="transition-colors hover:text-accent">
+            <a href="/terms#privacy" className="transition-colors hover:text-accent">
               Privacy
             </a>
-            <a href="#" className="transition-colors hover:text-accent">
+            <a href="/terms" className="transition-colors hover:text-accent">
               Terms
             </a>
             <a href="mailto:hello@kovva.app" className="transition-colors hover:text-accent">
               Contact
+            </a>
+            <a href="/contact" className="transition-colors hover:text-accent">
+              Contact page
             </a>
             <a
               href="https://instagram.com"

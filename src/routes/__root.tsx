@@ -80,18 +80,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Kovva" },
       { name: "theme-color", content: "#1b1b1b" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://waitlist.kovva.app" },
+      { property: "og:url", content: "https://kovva.app" },
       { property: "og:site_name", content: "Kovva" },
       {
         property: "og:image",
-        content: "https://waitlist.kovva.app/og-image.jpg",
+        content: "https://kovva.app/og-image.jpg",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:image",
-        content: "https://waitlist.kovva.app/og-image.jpg",
+        content: "https://kovva.app/og-image.jpg",
       },
     ],
     links: [
@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "canonical", href: "https://waitlist.kovva.app" },
+      { rel: "canonical", href: "https://kovva.app" },
     ],
   }),
 
