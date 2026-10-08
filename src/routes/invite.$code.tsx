@@ -4,7 +4,7 @@ import { KovvaLogo, KovvaMark } from "@/components/KovvaLogo";
 
 const title = "You've been invited to Kovva";
 const description =
-  "Someone invited you to Kovva — the fashion feed where style pays. Open the invite in the app.";
+  "Someone invited you to Kovva — the fashion feed where style earns. Open the invite in the app.";
 
 export const Route = createFileRoute("/invite/$code")({
   head: () => ({

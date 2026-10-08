@@ -9,7 +9,7 @@ import lookMinimal from "@/assets/look-minimal.jpg";
 import lookBold from "@/assets/look-bold.jpg";
 import lookTailored from "@/assets/look-tailored.jpg";
 
-const title = "Kovva — The fashion feed where style pays";
+const title = "Kovva — The fashion feed where style earns";
 const description =
   "Kovva is the app for fashion lovers: discover and share outfits, style yourself with AI, and earn commission when people shop your look. Join the early-access waitlist.";
 
@@ -169,7 +169,7 @@ function Index() {
               <h1 className="mt-6 text-[clamp(2rem,7vw,4.25rem)] font-bold leading-[1.05] tracking-[-0.035em] text-strong">
                 [The fashion feed]
                 <br />
-                <span className="text-accent">where style pays.</span>
+                <span className="text-accent">where style earns.</span>
               </h1>
 
               <p className="mt-6 max-w-xl text-body text-foreground">

@@ -4,7 +4,7 @@ import { KovvaLogo, KovvaMark } from "@/components/KovvaLogo";
 
 const title = "View this post on Kovva";
 const description =
-  "Someone shared an outfit post on Kovva — the fashion feed where style pays. Open it in the app.";
+  "Someone shared an outfit post on Kovva — the fashion feed where style earns. Open it in the app.";
 
 export const Route = createFileRoute("/post/$postId")({
   head: () => ({
